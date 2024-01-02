@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#sign-btn").click(function(){
+                $(".sign-up").show();
+            })
+            $(".sg-btn").click(function(){
+                var a=$("input-wrapper0").val();
+                if(a==""){
+                   alert("Fill The User Email");
+                }
+                var b=$("input-wrapper1").val();
+                if(b==""){
+                    alert("please fill the user name")
+                }
+                var c=$("input-wrapper2").val();
+                if(c==""){
+                    alert("Please Entered The Password");
+                }
+                alert("you are sign up sucessfully")
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="con">
+    <div class="conatiner">
+        <div class="wrapper">
+            <form action="" class="form-wrapper">
+                <h4>Login</h4>
+                <div class="input-wrapper1">
+                    <input type="text" required >
+                <label>Username</label>
+                </div>
+                <div class="input-wrapper2">
+                    <input type="text" required >
+                <label>Password</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <label><input type="checkbox" required>I agree To Login</label>
+            </div>
+            <div class="log-btn">
+                <button class="login-btn" ><a href="index.html">Login</a></button>
+                <p>Don't Have An Account<a id="sign-btn"href="#" onclick="btn()">sign up </a></p>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="sign-up">
+    <div class="conatiner">
+        <div class="wrapper">
+            <form action="" class="form-wrapper-sign-up">
+                <h4>Sign Up</h4>
+                <div class="input-wrapper0">
+                    <input type="text" required>
+                <label>email</label>
+                </div>
+                <div class="input-wrapper1">
+                    <input type="text" required>
+                <label>Username</label>
+                </div>
+                <div class="input-wrapper2">
+                    <input type="text" required>
+                <label>Password</label>
+            </div>
+            <div class="checkbox-wrapper">
+                <label><input type="checkbox">I agree To Login</label>
+            </div>
+            <div class="log-btn">
+                <button class="sg-btn">Sign Up</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
